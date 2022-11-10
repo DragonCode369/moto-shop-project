@@ -12,7 +12,14 @@ app.use(
     bodyParser.urlencoded({extended: true})
 );
 
+//middleware funciton, serve static Assets
+app.use('/public', express.static('public'));
+
+//Set view's
+app.set('views', path.join(__dirname, './views'));
+app.set('view engine', 'ejs'); // view engine, EJS
 //Database connection with mysql
+
 let con = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -20,17 +27,12 @@ let con = mysql.createConnection({
     database: "moto_shop"
 });
 
-app.use(express.static('public'));
-// view engine EJS
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, './views'));
-
 con.connect(function(err) {
     if(err) throw err;
     console.log("Connected to database.");
 });
 
-app.get('/', (req, res) => {
+app.get('', (req, res) => {
     res.render('index');
 });
 
