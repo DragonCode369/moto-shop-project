@@ -12,14 +12,15 @@ app.use(
     bodyParser.urlencoded({extended: true})
 );
 
-//middleware funciton, serve static Assets
+//Middleware funciton, serve static Assets
 app.use('/public', express.static('public'));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
-//Set view's
+//Set view's 
 app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'ejs'); // view engine, EJS
-//Database connection with mysql
 
+//Database connection with mysql
 let con = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -32,8 +33,28 @@ con.connect(function(err) {
     console.log("Connected to database.");
 });
 
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index');
+});
+
+app.get('/pocetna', (req, res) => {
+    res.render('pocetna');
+});
+
+app.get('/moto-oprema', (req, res) => {
+    res.render('moto-oprema');
+});
+
+app.get('/oprema-za-motore', (req, res) => {
+    res.render('oprema-za-motore');
+});
+
+app.get('/o-nama', (req, res) => {
+    res.render('o-nama');
+});
+
+app.get('/kontakt', (req, res) => {
+    res.render('kontakt');
 });
 
 app.listen(port, function() {

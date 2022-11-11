@@ -1,8 +1,12 @@
 * {
-    font-family: Sans-serif;
-    color: blue;
+    font-family: 'Roboto', 'Open Sans', 'sans-serif'; 
 }
 
-.nav-link-registration li{
-    margin-left: 2em;
+#navbarNavDropdown {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p {
+    margin: 0;
 }
