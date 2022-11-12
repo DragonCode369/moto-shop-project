@@ -1,16 +1,20 @@
-
             <footer class="container-fluid footer fixed-bottom" style="background-color: #212529;">
                 <div class="container">
-                    <dvi class="row">
+                    <div class="row">
                         <!-- Copyright -->
-                        <div class="col-12 text-center p-4">
+                        <div class="col-12 text-center p-4" id="copyright-wrapper">
                             <% let year = (new Date()).getFullYear() %>
-                            <p class="text-white align-middle">&copy; <%= year %> Copyright <a href="https://github.com/DragonCode369" target="_blank">DragonCode</a></p>
+                            <p class="text-white align-middle">
+                                Copyright &copy; <%= year %> 
+                                <a href="https://github.com/DragonCode369" target="_blank" class="github-profile-link">
+                                    DragonCode 
+                                    <img src="/public/images/github.png" alt="git-hub-icon" class="github-icon">
+                                </a> 
+                            </p>
                         </div>
                         <!-- end Copyright -->
-                    </dvi>
+                    </div>
                 </div>
-
             </footer>
         <!-- JavaScript Bundle with Popper -->
         <script src="/public/javascript/script.js"></script>

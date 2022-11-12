@@ -1,10 +1,107 @@
 * {
     font-family: 'Roboto', 'Open Sans', 'sans-serif'; 
+    box-sizing: border-box;
+    color: var(--text-color);
 }
 
-#navbarNavDropdown {
-    display: flex;
-    justify-content: space-between;
+:root {
+    --main-color: rgba(33, 37, 41, 0.5);
+    --brand-color: rgb(166, 28, 28);
+    --background-color: #2828282a;
+    --hover-color: rgb(97, 97, 95); /* #949492 */
+    --text-color: rgb(179, 177, 177);
+    --navbar-padding: 0.6em;
+
+    /*#cf111c -- crvena logo */
+}
+
+html body {
+    background-color: var(--background-color);
+}
+
+.navbar .bg-dark{
+    background-color: rgba(33, 37, 41, 0.5);
+}
+
+#nav-logo {
+    height: 2.5em;
+}
+
+.navbar .navbar-brand {
+    color: var(--brand-color);
+    font-size: 1.9em;
+    padding: 0 var(--navbar-padding);
+}
+
+.navbar .navbar-nav .nav-link {
+    font-size: 1.2em;
+    /* margin-left: 1.7em; -- poravnati linkovi sa logom, umesto margin stavimo u container i bs class*/ 
+    color: var(--text-color);
+    padding: var(--navbar-padding);
+    transition: all 0.5s;
+}
+
+/*boostrap: lg screen*/
+@media only screen and (min-width: 992px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        padding: 1em 0.7em;
+    }
+
+    .navbar .navbar-brand {
+        padding: 0 0.8em;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #prijava {
+        display: inline-block;
+        border-bottom: 2px solid rgba(130, 130, 130, 0.2);
+        border-right: none!important;
+    }
+    .shopping-cart-icon {
+        margin-top: var(--navbar-padding);
+    }
+}
+
+
+.navbar .navbar-nav .nav-link:hover {
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+.shopping-cart-icon {
+    width: 50px;
+    height: 50px;
+    margin-left: var(--navbar-padding);
+    margin-right: var(--navbar-padding);
+    color: var(--text-color);
+}
+
+#prijava {
+    border-right: 2px solid rgba(130, 130, 130, 0.2);
+}
+
+#copyright-wrapper {
+    line-height: 20px;
+}
+
+.github-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.github-profile-link {
+    color: rgb(179, 177, 177); 
+    text-decoration: none;
+}
+
+.github-profile-link:hover {
+    color: rgb(15, 15, 15);
 }
 
 footer p {
