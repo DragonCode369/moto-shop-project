@@ -40,11 +40,12 @@ html body {
 /*boostrap: lg screen*/
 @media only screen and (min-width: 992px) {
     .navbar {
-        padding: 0;
+        padding-top: 0!important;
+        padding-bottom: 0!important;
     }
 
     .navbar .navbar-nav .nav-link {
-        padding: 1em 0.7em;
+        padding: 2.1em 0.7em;
     }
 
     .navbar .navbar-brand {
@@ -53,6 +54,11 @@ html body {
 
     #login-shopping-cart-div {
         margin-left: calc(var(--navbar-padding) + 2em);
+        margin-top: 1.5em!important;
+    }
+
+    #nav-logo {
+        padding: 6px 0;
     }
 }
 
@@ -83,7 +89,7 @@ html body {
 #login-shopping-cart-div {
     height: 3em; 
     width: 8.5em;
-    background-color:rgba(187, 182, 182, 0.772);
+    background-color:rgba(187, 182, 182, 0.617);
     margin-top: 0.3em;
     margin-bottom: 0.3em;
     padding: 0 1em;
