@@ -5,36 +5,32 @@
 }
 
 :root {
-    --main-color: rgba(33, 37, 41, 0.5);
+    --main-color: rgba(0, 0, 0, 0.3);
+    /* --main-color: rgba(33, 37, 41, 0.5); */
     --brand-color: rgb(166, 28, 28);
     --background-color: #2828282a;
-    --hover-color: rgb(97, 97, 95); /* #949492 */
+    --hover-color: rgb(97, 97, 95);
     --text-color: rgb(179, 177, 177);
-    --navbar-padding: 0.6em;
-
-    /*#cf111c -- crvena logo */
+    --navbar-padding: 0.9em;
+    --icon-size: 2.1em;
+    --icon-margin-top: 0.7em;
 }
 
 html body {
     background-color: var(--background-color);
 }
 
-.navbar .bg-dark{
-    background-color: rgba(33, 37, 41, 0.5);
-}
-
 #nav-logo {
-    height: 2.5em;
+    height: 2.9em;
 }
 
 .navbar .navbar-brand {
-    color: var(--brand-color);
-    font-size: 1.9em;
+    font-size: 2.2em;
     padding: 0 var(--navbar-padding);
 }
 
 .navbar .navbar-nav .nav-link {
-    font-size: 1.2em;
+    font-size: 1.1em;
     /* margin-left: 1.7em; -- poravnati linkovi sa logom, umesto margin stavimo u container i bs class*/ 
     color: var(--text-color);
     padding: var(--navbar-padding);
@@ -54,19 +50,18 @@ html body {
     .navbar .navbar-brand {
         padding: 0 0.8em;
     }
+
+    #login-shopping-cart-div {
+        margin-left: calc(var(--navbar-padding) + 2em);
+    }
 }
 
+/*small screen (phones)*/
 @media only screen and (max-width: 992px) {
-    #prijava {
-        display: inline-block;
-        border-bottom: 2px solid rgba(130, 130, 130, 0.2);
-        border-right: none!important;
-    }
-    .shopping-cart-icon {
-        margin-top: var(--navbar-padding);
+    #login-shopping-cart-div {
+        margin-left: none!important;
     }
 }
-
 
 .navbar .navbar-nav .nav-link:hover {
     background-color: var(--hover-color);
@@ -75,19 +70,37 @@ html body {
 }
 
 .shopping-cart-icon {
-    width: 50px;
-    height: 50px;
-    margin-left: var(--navbar-padding);
-    margin-right: var(--navbar-padding);
-    color: var(--text-color);
+    width: var(--icon-size);
+    height: var(--icon-size);
 }
 
-#prijava {
-    border-right: 2px solid rgba(130, 130, 130, 0.2);
+.vr {
+    height: 1.9em;
+    margin-top: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.778);
 }
 
-#copyright-wrapper {
-    line-height: 20px;
+#login-shopping-cart-div {
+    height: 3em; 
+    width: 8.5em;
+    background-color:rgba(187, 182, 182, 0.772);
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    padding: 0 1em;
+    border-radius: 3em; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    color:rgb(179, 177, 177);
+}
+
+#logn:hover {
+    background-color: var(--background-color)!important;
 }
 
 .github-icon {
