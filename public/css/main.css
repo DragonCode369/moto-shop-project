@@ -7,7 +7,7 @@
 :root {
     --main-color: rgba(33, 37, 41, 0.5);
     --brand-color: rgb(207, 17, 28);
-    --background-color: #373636;
+    --background-color: rgb(23, 22, 22);
     --hover-color: rgba(97, 97, 95, 0.7);
     --text-color: rgb(179, 177, 177);
     --navbar-padding: 0.9em;
@@ -52,7 +52,34 @@ html body {
     transition: 0.5s;
 }
 
-/*boostrap: lg screen*/
+/*small screens phones util 768px or equal to*/
+@media only screen and (max-width: 768px) {
+    .container .home-card-image {
+        width: 6rem!important;
+    }
+}
+
+/*small screens (phones)*/
+@media only screen and (max-width: 992px) {
+    #login-shopping-cart-div {
+        margin-left: none!important;
+    }
+
+    .nav-item .dropdown-menu .dropdown-item:hover {
+        background-color: var(--hover-color); 
+    }
+}
+
+/*small screens --> equal to or greater than 768px*/
+@media only screen and (min-width: 768px) {
+    .container .home-card-image {
+        width: 10rem; 
+        transition: 0.25s;
+        margin: 10px 10px;
+    }
+}
+
+/*md screens*/
 @media only screen and (min-width: 992px) {
     .navbar {
         padding-top: 0!important;
@@ -68,7 +95,6 @@ html body {
     }
 
     .nav-item .dropdown-menu {
-        /* border: 2px solid black; */
         box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
     }
 
@@ -81,17 +107,21 @@ html body {
     #nav-logo {
         padding: 6px 0;
     }
-
 }
 
-/*small screen (phones)*/
-@media only screen and (max-width: 992px) {
-    #login-shopping-cart-div {
-        margin-left: none!important;
+/*lg screens*/
+@media only screen and (min-width: 1200px){
+    .container .home-card-image {
+        width: 14rem!important;
+        transition: 0.25s!important;
+        margin: 10px 10px!important;
     }
+}
 
-    .nav-item .dropdown-menu .dropdown-item:hover {
-        background-color: var(--hover-color); 
+@media only screen and (min-width: 1400px) {
+    .container .home-card-image {
+        width: 18rem!important;
+        transition: 0.25s;
     }
 }
 
@@ -159,7 +189,9 @@ html body {
 }
 
 .container .home-card-image {
-    width: 18rem;
+    width: 8rem;
+    margin: 10px 6px;
+    padding: 0;
 }
 
 .container .home-card-image:hover {
@@ -173,7 +205,6 @@ html body {
 }
 
 /*-----footer-----*/
-
 .github-icon {
     width: 1.8rem;
     height: 1.8rem;
