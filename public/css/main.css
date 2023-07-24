@@ -27,11 +27,14 @@ h6 {
 
 :root {
     --main-color: rgba(33, 37, 41, 0.5);
-    --brand-color: rgb(207, 17, 28);
-    --background-color: rgba(23, 22, 22, 0.953);
-    --hover-color: rgba(97, 97, 95, 0.7);
-    --text-color: rgb(179, 177, 177);
-    --navbar-padding: 0.9em;
+    --brand-color: rgb(211, 186, 187);
+    --background-color: rgba(40, 40, 40, 0.9);
+    --text-color: rgb(212, 210, 210);
+    /* --hover-color: rgba(57, 57, 55, 0.499); */
+    --hover-color: rgba(233, 64, 81, 0.6);
+    /* --hover-color:  rgba(200, 200, 200, 0.3);  */
+    --navbar-color: rgba(28, 32, 37, 0.8); 
+    --navbar-padding: 1em;
     --icon-size: 2.1em;
     --icon-margin-top: 0.7em;
     --footer-color: #101010;
@@ -42,7 +45,21 @@ html body {
 }
 
 #nav-logo {
-    height: 2.9em;
+    height: 3em;
+}
+
+.carousel {
+    position: relative;
+    z-index: 0;
+}
+
+#navbar {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;  
+    background-color: var(--navbar-color);
+    z-index: 1;
 }
 
 .navbar .navbar-brand {
@@ -221,7 +238,7 @@ html body {
 }
 
 .carousel .carousel-item {
-    height: 500px;
+    height: 700px;
 }
 
 .carousel-item img {
@@ -253,7 +270,7 @@ html body {
 
 #about-us-background-image {
     position: relative;
-    height: 370px;
+    height: 500px;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -273,7 +290,7 @@ html body {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .about-us-header {
@@ -281,17 +298,55 @@ html body {
 }
 
 .about-us-main-content {
-    margin: 0 auto;
-    margin-top: 4em;
     width: 1200px;
+    margin: 0 auto;
+}
+
+.about-us-first-content-section {
+    margin-top: 4em;
     display: flex;
-    justify-content:space-between;
+}
+
+.about-us-second-content-section {
+    margin-top: 4em;
+    display: flex;
+}
+
+.about-us-content{
+    background-color: rgba(231, 228, 228, 0.19);
+    border: 1px solid #ccc;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.about-us-content{
+    background-color: rgba(231, 228, 228, 0.19);
+    border: 1px solid #ccc;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.about-us-image-container img {
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+#about-us-first-text {
+    margin-left: 2em;
+}
+
+#about-us-second-text {
+    margin-right: 2em;
 }
 
 /*-----footer-----*/
 .github-icon {
     width: 1.8rem;
     height: 1.8rem;
+}
+
+#footer-container {
+    margin-top: 40px;
 }
 
 .github-profile-link {
