@@ -46,13 +46,17 @@
           </li>
           <div class="hstack gap-3" id="login-shopping-cart-div">
             <li class="nav-item">
-              <a class="login-icon" href="#">
+              <!-- Icon for Sidebar1 Trigger -->
+              <a href="#" class="login-icon" id="sidebarTrigger1">
                 <img src="/public/images/icons/login2.svg" alt="login" id="login">
-              </a>
+              </a><!-- .login-icon -->
             </li>
             <div class="vr"></div>
-              <li class="nav-item">
-                <a href="#"><img src="/public/images/icons/shopping-cart.png" alt="shopping-cart-icon" class="shopping-cart-icon"></a>
+              <li class="nav-item" id="shopping-cart-icon">
+              <!-- Icon for Sidebar2 Trigger -->
+                <a href="#" class="navbar-text" id="sidebarTrigger2">
+                  <img src="/public/images/icons/shopping-cart.png" alt="shopping-cart-icon" class="shopping-cart-icon">
+                </a><!-- shopping-cart-icon -->
               </li>
           </div>
         </ul>
@@ -61,3 +65,38 @@
     </div>
   </div>
 </nav>
+<!-- First Sidebar -->
+<div class="login-sidebar">
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="sidebarNav1" aria-labelledby="sidebarNavLabel1">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebarNavLabel1">Prijavi se</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Content for Sidebar 1 goes here. -->
+      <div class="form">
+        <form action="/login" method="POST">
+          <label for="email">Korisnička adresa e-pošte:</label>
+          <input type="email" id="email"><br>
+          <label for="password">Lozinka</label>
+          <input type="password">
+          <input type="checkbox" value="IsRememberMe" id="rememberMe"> 
+          <label for="rememberMe">Zapamti me</label>
+          <input type="submit" value="Login" onclick="IsRememberMe()">
+        </form>
+      </div><!-- .form -->
+    </div><!-- .offcanvas-body -->
+  </div>
+</div><!-- .login-sidebar -->
+
+<!-- Second Sidebar -->
+<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="sidebarNav2" aria-labelledby="sidebarNavLabel2">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="sidebarNavLabel2">Sidebar 2</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Content for Sidebar 2 goes here -->
+    <p>This is the content of Sidebar 2.</p>
+  </div>
+</div>

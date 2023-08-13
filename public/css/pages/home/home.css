@@ -6,7 +6,7 @@
 }
 
 #home-background-image {
-    background: url(/public/images/home-background-image.jpg) no-repeat center center; 
+    background: url(/public/images/home/home-background-image.jpg) no-repeat center center; 
     background-size: cover;
     height: 370px;
     opacity: 0.5;

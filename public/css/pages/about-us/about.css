@@ -1,0 +1,94 @@
+
+#about-us-background-image {
+    position: relative;
+    height: 500px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-us-background-image::before {
+    content: "";
+    background-image: url(/public/images/about-us/background-image-onama2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    max-height: 500px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+
+.about-us-header {
+    text-align: center;
+}
+
+.about-us-main-content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.about-us-first-content-section {
+    margin-top: 4em;
+    display: flex;
+}
+
+.about-us-second-content-section {
+    margin-top: 4em;
+    display: flex;
+}
+
+.about-us-content{
+    background-color: rgba(231, 228, 228, 0.19);
+    border: 1px solid #ccc;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.about-us-content{
+    background-color: rgba(231, 228, 228, 0.19);
+    border: 1px solid #ccc;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.about-us-image-container img {
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+#about-us-first-text {
+    margin-left: 2em;
+}
+
+#about-us-second-text {
+    margin-right: 2em;
+}
+
+/*-----footer-----*/
+.github-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+#footer-container {
+    margin-top: 40px;
+}
+
+.github-profile-link {
+    color: rgb(179, 177, 177); 
+    text-decoration: none;
+}
+
+.github-profile-link:hover {
+    color: rgb(15, 15, 15);
+}
+
+footer p {
+    margin: 0;
+}
