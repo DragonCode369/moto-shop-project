@@ -34,7 +34,7 @@ con.connect(function(err) {
 });
 
 app.get('/', (req, res) => {
-    res.render('pocetna');
+    res.render('index'); //pocetna
 });
 
 app.get('/moto-oprema', (req, res) => {
