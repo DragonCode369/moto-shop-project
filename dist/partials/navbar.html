@@ -1,0 +1,102 @@
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="/"><img src="/public/images/logo/moto-dragon-logo1.png" id="nav-logo" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Početna</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Moto oprema 
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Kacige</a></li>
+              <li><a class="dropdown-item" href="#">Jakne</a></li>
+              <li><a class="dropdown-item" href="#">Rukavice</a></li>
+              <li><a class="dropdown-item" href="#">Podkape</a></li>
+              <li><a class="dropdown-item" href="#">Pantalone</a></li>
+              <li><a class="dropdown-item" href="#">Obuća</a></li>
+              <li><a class="dropdown-item" href="#">Kožni kombinezoni</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Oprema za motore
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Blatobrani</a></li>
+              <li><a class="dropdown-item" href="#">Koferi</a></li>
+              <li><a class="dropdown-item" href="#">Crash padovi</a></li>
+              <li><a class="dropdown-item" href="#">Maglenke</a></li>
+              <li><a class="dropdown-item" href="#">Vizir za motore</a></li>
+              <li><a class="dropdown-item" href="#">Štenderi</a></li>
+              <li><a class="dropdown-item" href="#">Torbe</a></li>
+              <li><a class="dropdown-item" href="#">Cirade za motore</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/o-nama">O nama</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/kontakt">Kontakt</a>
+          </li>
+          <div class="hstack gap-3" id="login-shopping-cart-div">
+            <li class="nav-item">
+              <!-- Icon for Sidebar1 Trigger -->
+              <a href="#" class="login-icon" id="sidebarTrigger1">
+                <img src="/public/images/icons/login2.svg" alt="login" id="login">
+              </a><!-- .login-icon -->
+            </li>
+            <div class="vr"></div>
+              <li class="nav-item" id="shopping-cart-icon">
+              <!-- Icon for Sidebar2 Trigger -->
+                <a href="#" class="navbar-text" id="sidebarTrigger2">
+                  <img src="/public/images/icons/shopping-cart.png" alt="shopping-cart-icon" class="shopping-cart-icon">
+                </a><!-- shopping-cart-icon -->
+              </li>
+          </div>
+        </ul>
+      <div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- First Sidebar -->
+<div class="login-sidebar">
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="sidebarNav1" aria-labelledby="sidebarNavLabel1">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebarNavLabel1">Prijavi se</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Content for Sidebar 1 goes here. -->
+      <div class="form">
+        <form action="/login" method="POST">
+          <label for="email">Korisnička adresa e-pošte:</label>
+          <input type="email" id="email"><br>
+          <label for="password">Lozinka</label>
+          <input type="password">
+          <input type="checkbox" value="IsRememberMe" id="rememberMe"> 
+          <label for="rememberMe">Zapamti me</label>
+          <input type="submit" value="Login" onclick="IsRememberMe()">
+        </form>
+      </div><!-- .form -->
+    </div><!-- .offcanvas-body -->
+  </div>
+</div><!-- .login-sidebar -->
+
+<!-- Second Sidebar -->
+<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="sidebarNav2" aria-labelledby="sidebarNavLabel2">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="sidebarNavLabel2">Sidebar 2</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Content for Sidebar 2 goes here -->
+    <p>This is the content of Sidebar 2.</p>
+  </div>
+</div>

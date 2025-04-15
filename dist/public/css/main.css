@@ -1,0 +1,15 @@
+
+/* main.css */
+/* Import component-specific css files */
+
+@import 'components/header.css';
+@import 'components/navbar.css';
+@import 'components/media-query.css';
+@import 'components/footer.css';
+
+/* Import pages-spesific css files */
+@import 'pages/home/home.css';
+@import 'pages/about-us/about.css';
+
+/* Import global css styles */
+@import 'styles.css';

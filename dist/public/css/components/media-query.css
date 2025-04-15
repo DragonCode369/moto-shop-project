@@ -1,0 +1,101 @@
+/*small screens phones util 768px or equal to*/
+@media only screen and (max-width: 768px) {
+    .container .home-card-image {
+        width: 6rem!important;
+    }
+
+    .container .home-card-image .card-body h6 {
+        font-size: 0.8em!important;
+    }
+}
+
+/*small screens (phones)*/
+@media only screen and (max-width: 992px) {
+    #login-shopping-cart-div {
+        margin-left: none!important;
+    }
+
+    .nav-item .dropdown-menu .dropdown-item:hover {
+        background-color: var(--hover-color); 
+    }
+}
+
+/*small screens --> equal to or greater than 768px*/
+@media only screen and (min-width: 768px) {
+    .container .home-card-image {
+        width: 10rem!important; 
+        transition: 0.5s!important;
+        margin: 10px 10px!important;
+    }
+
+    .container .home-card-image:hover {
+        box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.5);
+        scale: 1.030;
+        transition: 0.25s;
+    }
+
+    .container .home-card-image:active {
+        scale: 0.99;
+    }
+}
+
+/*md screens*/
+@media all and (min-width: 992px) {
+    .navbar {
+        padding-top: 0!important;
+        padding-bottom: 0!important;
+    }
+
+    .navbar .navbar-brand {
+        padding: 0 0.8em;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        padding: 2.1em 0.7em;
+    }
+
+    .nav-item .dropdown-menu {
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        display: none;
+        margin-top: 0;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        display: block;
+    }
+
+    #login-shopping-cart-div {
+        margin-left: calc(var(--navbar-padding) + 2em);
+        margin-right: 8px;
+        margin-top: 1.5em!important;
+    }
+
+    #nav-logo {
+        padding: 6px 0;
+    }
+}
+
+/*lg screens*/
+@media only screen and (min-width: 1200px){
+    .container .home-card-image {
+        width: 14rem!important;
+        transition: 0.5s!important;
+        margin: 10px 10px!important;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .container .home-card-image {
+        width: 18rem!important;
+        transition: 0.25s!important;
+    }
+}
+
+/*-----about us page----*/
+
+@media only screen and (max-width: 768px) {
+
+}
