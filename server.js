@@ -54,6 +54,19 @@ app.get('/kontakt', (req, res) => {
     res.render('kontakt');
 });
 
+app.post('/contact-form', (req, res) => { 
+    let name = req.body.name;
+    let surname = req.body.surname;
+    let email = req.body.email;
+    let msg = req.body.textbox;
+
+    res.json({
+        data: [name, surname, email, msg],
+        result: "ok"
+    });
+
+});
+
 app.listen(port, function() {
     console.log(`Server is listening at port ${port}`);
 });
