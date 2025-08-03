@@ -38,6 +38,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/moto-oprema', (req, res) => {
+
     res.render('moto-oprema');
 });
 

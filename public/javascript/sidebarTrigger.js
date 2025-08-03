@@ -52,4 +52,17 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebar2.classList.remove("show");
       }
     });
+
+    // Close Sidebar When Clicking Escape
+    document.addEventListener("keydown", function (e) {
+        let sidebar1 = document.getElementById("sidebarNav1");
+        let sidebar2 = document.getElementById("sidebarNav2");
+
+        if (e.key === 'Escape') {
+            sidebar1.classList.remove("show");
+            sidebar2.classList.remove("show");
+        }
+    });
+
 });
+

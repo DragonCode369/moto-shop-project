@@ -10,6 +10,7 @@
 /* Import pages-spesific css files */
 @import 'pages/home/home.css';
 @import 'pages/about-us/about.css';
+@import 'pages/contact/contact.css';
 
 /* Import global css styles */
 @import 'styles.css';
