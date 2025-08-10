@@ -17,6 +17,7 @@
         <script defer src="/public/javascript/sidebarTrigger.js"></script>
         <script defer src="/public/javascript/script.js"></script>
         <title>Moto Dragon</title>
+        <%- typeof extraHead !== 'undefined' ? extraHead : '' %>
     </head>
     <body>
         <%- include('navbar.ejs') %> 
