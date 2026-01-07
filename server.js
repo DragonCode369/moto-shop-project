@@ -38,7 +38,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/moto-oprema', (req, res) => {
-
     res.render('moto-oprema');
 });
 
@@ -54,7 +53,6 @@ app.get('/kontakt', (req, res) => {
     res.render('kontakt', {
         extraHead: '<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>'
     });
-
 });
 
 app.post('/contact-form', (req, res) => { 
@@ -127,6 +125,9 @@ app.post('/contact-form', (req, res) => {
 app.post('/login', function(req, res) {
     let email = req.body.email;
     let password = req.body.password;
+
+    
+
 
 });
 
