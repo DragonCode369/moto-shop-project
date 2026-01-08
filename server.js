@@ -55,6 +55,18 @@ app.get('/kontakt', (req, res) => {
     });
 });
 
+// Moto oprema category routes - dynamic route with parameter
+app.get('/moto-oprema/:category', (req, res) => {
+    const category = req.params.category;
+    res.render(`moto-oprema/${category}`);
+});
+
+// Oprema za motore category routes - dynamic route with parameter
+app.get('/oprema-za-motore/:category', (req, res) => {
+    const category = req.params.category;
+    res.render(`oprema-za-motore/${category}`);
+});
+
 app.post('/contact-form', (req, res) => { 
     let name = req.body.name && req.body.name.trim();
     let surname = req.body.surname && req.body.surname.trim();
