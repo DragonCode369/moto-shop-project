@@ -41,9 +41,9 @@ app.get('/moto-oprema', (req, res) => {
     res.render('moto-oprema');
 });
 
-app.get('/oprema-za-motore', (req, res) => {
-    res.render('oprema-za-motore');
-});
+// app.get('/oprema-za-motore', (req, res) => {
+//     res.render('oprema-za-motore');
+// });
 
 app.get('/o-nama', (req, res) => {
     res.render('o-nama');
@@ -55,16 +55,53 @@ app.get('/kontakt', (req, res) => {
     });
 });
 
-// Moto oprema category routes - dynamic route with parameter
-app.get('/moto-oprema/:category', (req, res) => {
-    const category = req.params.category;
-    res.render(`moto-oprema/${category}`);
-});
+// // Moto oprema category routes - dynamic route with parameter
+// app.get('/moto-oprema/:category', (req, res) => {
+//     const category = req.params.category;
+//     res.render(`moto-oprema/${category}`);
+// });
 
 // Oprema za motore category routes - dynamic route with parameter
 app.get('/oprema-za-motore/:category', (req, res) => {
     const category = req.params.category;
     res.render(`oprema-za-motore/${category}`);
+});
+
+const motoOpremaCategories = [
+    'jakne',
+    'kacige',
+    'rukavice',
+    'pantalone',
+    'podkape',
+    'obuca',
+    'kozni-kombinezoni'
+];
+
+app.get('/moto-oprema/:category', function(req, res) {
+    const category = req.params.category;
+
+    if (motoOpremaCategories.indexOf(category) === -1) {
+        return res.status(404).send('Page not found');
+    }
+
+    const sql = `
+        SELECT id, name, description, price, image_url
+        FROM products
+        WHERE category = 'moto-oprema'
+        AND subcategory = ?
+    `;
+
+    con.query(sql, [category], function(err, results) {
+        if (err) {
+            console.log(err);
+            return res.status(500).send('Database error');
+        }
+
+        res.render('moto-oprema/' + category, {
+            products: results,
+            category: category
+        });
+    });
 });
 
 app.post('/contact-form', (req, res) => { 
