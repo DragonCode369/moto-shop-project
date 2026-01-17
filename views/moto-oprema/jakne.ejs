@@ -2,40 +2,47 @@
     extraHead: '<link rel="stylesheet" href="/public/css/products.css">'
 }) %>
 
+<div class="navbar-spacer"></div>
+
 <% if (!products || products.length === 0) { %>
     <p>Nema proizvoda u ovoj kategoriji.</p>
 <% } else { %>
+<div class="products-container">
 
-<div class="product-grid">
+    <div class="side-section">
+        <h1>Side section h1</h1>
+    </div>
 
-    <% for (let i = 0; i < products.length; i++) { %>
-        <div class="product-card">
+    <div class="product-grid">
 
-            <img 
-                src="/public/images/products/jackets/<%= products[i].image ? products[i].image : 'placeholder.png' %>" 
-                alt="<%= products[i].name %>"
-            >
+        <% for (let i = 0; i < products.length; i++) { %>
+            <div class="product-card">
 
-            <div class="product-card-body">
-                <div class="product-card-title">
-                    <%= products[i].name %>
-                </div>
+                <img 
+                    src="/public/<%= products[i].image_url ? products[i].image_url : 'placeholder.png' %>" 
+                    alt="<%= products[i].name %>"
+                >
 
-                <% if (products[i].description) { %>
-                    <div class="product-card-description">
-                        <%= products[i].description.substring(0, 80) %>...
+                <div class="product-card-body">
+                    <div class="product-card-title">
+                        <%= products[i].name %>
                     </div>
-                <% } %>
 
-                <div class="product-card-price">
-                    <%= products[i].price %> RSD
+                    <% if (products[i].description) { %>
+                        <div class="product-card-description">
+                            <%= products[i].description.substring(0, 80) %>...
+                        </div>
+                    <% } %>
+
+                    <div class="product-card-price">
+                        <%= products[i].price %> RSD
+                    </div>
                 </div>
-            </div>
 
-        </div>
-    <% } %>
-
-</div>
+            </div><!-- .product-card -->
+        <% } %>
+    </div><!-- .product-grid -->
+</div><!-- .products-container -->
 
 <% } %>
 

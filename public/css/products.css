@@ -1,10 +1,25 @@
+
+.products-container {
+    display: grid;
+    grid-template-columns: 400px 1fr; 
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.side-section {
+
+}
+
+.navbar-spacer {
+    height: 106px;
+}
+
 /* PRODUCT GRID */
 .product-grid {
     display: grid;
-    padding: 250px 100px;
+    padding: 0 100px;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1.5rem;
-    width: 100%;
 }
 
 /* PRODUCT CARD */
